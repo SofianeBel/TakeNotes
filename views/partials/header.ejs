@@ -1,0 +1,14 @@
+<!-- header -->
+<header>
+    <h1>Take Notes</h1>
+    <nav>
+        <% if (typeof userId !== 'undefined') { %>
+            <a href="/notes">Mes Notes</a>
+            <a href="/notes/add">Ajouter une Note</a>
+            <a href="/logout">Déconnexion</a>
+        <% } else { %>
+            <a href="/login">Connexion</a>
+            <a href="/register">Inscription</a>
+        <% } %>
+    </nav>
+</header>

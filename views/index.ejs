@@ -1,0 +1,23 @@
+<% title = 'Mes Notes' %>
+
+<h2>Mes Notes</h2>
+<a href="/notes/add" class="button">Ajouter une Nouvelle Note</a>
+<% if (notes.length === 0) { %>
+    <p>Aucune note disponible.</p>
+<% } else { %>
+    <ul class="notes-list">
+        <% notes.forEach(note => { %>
+            <li>
+                <h3><%= note.title %></h3>
+                <p><%= note.content %></p>
+                <small>Créé le : <%= new Date(note.created_at).toLocaleString() %></small>
+                <div class="actions">
+                    <a href="/notes/edit/<%= note.id %>">Modifier</a>
+                    <form action="/notes/delete/<%= note.id %>" method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette note ?');">
+                        <button type="submit">Supprimer</button>
+                    </form>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+<% } %> 

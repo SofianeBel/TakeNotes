@@ -1,0 +1,13 @@
+<% title = 'Modifier la Note' %>
+     
+<h2>Modifier la Note</h2>
+<form action="/notes/edit/<%= note.id %>" method="POST">
+    <label for="title">Titre :</label>
+    <input type="text" id="title" name="title" value="<%= note.title %>" required>
+
+    <label for="content">Contenu :</label>
+    <textarea id="content" name="content" required><%= note.content %></textarea>
+
+    <button type="submit">Mettre à Jour</button>
+</form>
+<a href="/notes">Retour aux Notes</a> 

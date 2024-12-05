@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %> | Gestionnaire de Notes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <% if (error && error.length > 0) { %>
+            <div class="error">
+                <% error.forEach(msg => { %>
+                    <p><%= msg %></p>
+                <% }) %>
+            </div>
+        <% } %>
+        <% if (success && success.length > 0) { %>
+            <div class="success">
+                <% success.forEach(msg => { %>
+                    <p><%= msg %></p>
+                <% }) %>
+            </div>
+        <% } %>
+        <%- body %>
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+</html>
