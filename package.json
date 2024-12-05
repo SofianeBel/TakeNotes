@@ -1,0 +1,11 @@
+{
+  "name": "projet_notes",
+  "version": "0.0.0",
+  "description": "School project to test express/databases and frontend development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SIFLY",
+  "license": "ISC"
+}
